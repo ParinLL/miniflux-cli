@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.7
 
-FROM --platform=$BUILDPLATFORM golang:1.26-alpine AS build
+FROM --platform=$BUILDPLATFORM golang:1.22-alpine AS build
 
 ARG TARGETOS
 ARG TARGETARCH
@@ -25,4 +25,4 @@ COPY --from=build /out/miniflux-cli /usr/local/bin/miniflux-cli
 USER appuser
 
 ENTRYPOINT ["miniflux-cli"]
-CMD ["me"]
+CMD ["entries"]
