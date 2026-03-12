@@ -5,9 +5,4 @@ services:
       dockerfile: Dockerfile
     env_file:
       - .env
-    environment:
-      MINIFLUX_BASE_URL: ${MINIFLUX_BASE_URL:-http://127.0.0.1:8080/v1/}
-      MINIFLUX_USERNAME: ${MINIFLUX_USERNAME:-}
-      MINIFLUX_PASSWORD: ${MINIFLUX_PASSWORD:-}
-      MINIFLUX_API_TOKEN: ${MINIFLUX_API_TOKEN:-}
     command: ["entries", "--status", "unread"]

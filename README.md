@@ -76,9 +76,16 @@ nerdctl.lima build \
 
 ## Run with compose
 
+`compose.yaml` uses `env_file: .env`, so compose reads `.env` automatically.
+
 ```bash
-set -a; source .env; set +a
 nerdctl.lima compose up --build
+```
+
+Default compose command:
+
+```bash
+miniflux-cli entries --status unread
 ```
 
 ## Feature usage
