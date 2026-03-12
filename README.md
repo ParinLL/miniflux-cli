@@ -83,12 +83,14 @@ Build the local image:
 nerdctl.lima build -t miniflux-cli:local .
 ```
 
-Build multi-arch images with BuildKit:
+Build and push multi-arch image (Docker Hub):
 
 ```bash
 nerdctl.lima build \
   --platform=linux/amd64,linux/arm64 \
-  -t miniflux-cli:multiarch .
+  -t dokfish/miniflux-cli:v1.0 .
+
+nerdctl.lima push --all-platforms dokfish/miniflux-cli:v1.0
 ```
 
 ## Run with compose
