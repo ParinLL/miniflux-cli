@@ -1,0 +1,8 @@
+.git
+.gitignore
+.env
+.env.*
+!.env.example
+.gocache
+bin
+dist
