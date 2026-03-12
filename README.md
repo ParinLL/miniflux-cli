@@ -96,9 +96,11 @@ nerdctl.lima push --all-platforms dokfish/miniflux-cli:v1.0
 ## Run with compose
 
 `compose.yaml` uses `env_file: .env`, so compose reads `.env` automatically.
+The service uses this pinned image:
+`dokfish/miniflux-cli:v1.0@sha256:5f6690173d0cc1429e5d7a153670a15645c3e78c5465e39f03db58b663d1656d`
 
 ```bash
-nerdctl.lima compose up --build
+nerdctl.lima compose up
 ```
 
 Default compose command:

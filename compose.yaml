@@ -1,8 +1,6 @@
 services:
   miniflux-cli:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: dokfish/miniflux-cli:v1.0@sha256:5f6690173d0cc1429e5d7a153670a15645c3e78c5465e39f03db58b663d1656d
     env_file:
       - .env
     command: ["entries", "--status", "unread"]
