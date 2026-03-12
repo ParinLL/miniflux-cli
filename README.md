@@ -14,6 +14,13 @@ Small Go CLI for the [Miniflux API](https://miniflux.app/docs/api.html).
 
 ## Environment variables
 
+You can configure credentials in either way:
+
+1. Edit `.env` (recommended for local development)
+2. Set environment variables directly in your shell
+
+### Option 1: Edit `.env`
+
 Create your local env file:
 
 ```bash
@@ -39,6 +46,16 @@ MINIFLUX_API_TOKEN="your-token"
 ```
 
 When `MINIFLUX_API_TOKEN` is set, the CLI sends it in `X-Auth-Token`.
+
+### Option 2: Set env directly
+
+```bash
+export MINIFLUX_BASE_URL="http://127.0.0.1:8080/v1/"
+export MINIFLUX_API_TOKEN="your-token"
+# or use username/password instead of token
+export MINIFLUX_USERNAME="your-username"
+export MINIFLUX_PASSWORD="your-password"
+```
 
 ## Local build
 
